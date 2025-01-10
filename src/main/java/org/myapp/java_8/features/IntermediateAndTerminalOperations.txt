@@ -1,0 +1,31 @@
+1.Intermediate Operations: All intermediate operations return a stream
+                          (that can be changed)
+----------------------------
+filter()
+map()      user for one-to-one mapping
+flatMap()  used for one-to-one mapping & data flattering
+sorted()
+sorted(comparator)
+distinct()
+peek()
+limit()
+skip()
+
+2.Terminal Operations: All Terminal operations produces a non-stream
+                       (that can not be changed)return such as a value, a 
+                       collection,or not a value at all;
+----------------------------------
+forEach()
+forEachOrdered()
+min()
+max()
+count()
+toArray()
+collect()
+
+reduce()
+anyMatch()
+allMatch()
+noneMatch()
+findFirst()
+findAny()

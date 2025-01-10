@@ -1,0 +1,18 @@
+SOLID Principles:
+
+In Java, SOLID is an acronym representing five design principles that aim to make object-oriented code more
+maintainable, flexible, and scalable. These principles help in writing cleaner and more understandable code.
+
+1. Single Responsibility Principle
+
+Definition: A class should have only one reason to change, meaning it should have only one job or responsibility.
+Purpose: This reduces the complexity of a class and makes it easier to maintain and test.
+
+2. Open/Closed Principle (OCP)
+
+Definition: Software entities (classes, modules, functions) should be open for extension but closed for
+            modification.
+Purpose: This promotes flexibility in your codebase, allowing you to extend functionality without modifying
+         existing code, reducing the risk of introducing bugs.
+Example: If you want to add new behavior to a system, you can create new classes or methods rather than
+         changing existing ones. This can be achieved using interfaces, abstract classes, or inheritance.

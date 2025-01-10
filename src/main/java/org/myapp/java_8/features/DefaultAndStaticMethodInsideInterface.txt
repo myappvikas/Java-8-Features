@@ -1,0 +1,58 @@
+Anonymous inner class is more powerful than Lambda Expression.
+
+Anonymous inner class |
+-----------------------
+ 1.Anonymous inner class can extends a normal class.
+ 2.Anonymous inner class can extends an abstract class.
+ 3.Anonymous inner class can implement an interface which contain any number
+   of abstract method.
+
+Default Method| Virtual Extension method| Defender Method|
+----------------------------------------------------------
+It is new feature of java 8.
+
+Without affecting the implementation class if we are allowed to add new method 
+inside interface.Then you should go for default method.
+
+Advantage: Backward compatibility.
+
+We can't override the Object class methods but if you want you can declare Object
+class methods.
+
+We can override default method. But at time of overriding you must use public keyword.
+because inside a class default keyword having meaning is there in switch-case statement.
+
+Java does not provide support for multiple inheritance with respect to classes 
+because of ambiguity problem.
+
+But from Java 8 it provide support for multiple inheritance with respect to interface only
+we can achieve this by using interface name dot super keyword only.
+
+Ex: InterfaceName.super.m1();
+
+Example1: Suppose we have a interface and there are 100 implementation class. If you 
+are adding a extra method inside interface then immediately you are going to get 
+compilation error because of all 100 implementation class will give compilation 
+error.  
+
+Example2: List, Set, Map interfaces.
+
+static method inside interface|
+-------------------------------
+We can define static method inside interface from java 8.
+
+Reason: Static method no way related to class that's why it is better to go for 
+defining inside interface.
+
+Meant for: To define general utility methods we are not required to call with class name.
+
+We can call interface static method with interface name only.
+
+Interface static method by default is not available to child class so we can't call 
+interface static method with child class reference. 
+
+From java 8 main method also allowed inside interface.
+ 
+
+
+

@@ -1,0 +1,11 @@
+Why Lambda Expression came:
+
+To enable functional programming in Java Lambda Expression concept came.
+
+What is Lambda Expression?
+----------------------------
+
+It is an anonymous Function
+      Nameless
+      Without Return Type
+      Without modifiers

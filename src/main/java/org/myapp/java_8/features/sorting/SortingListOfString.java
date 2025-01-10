@@ -1,0 +1,46 @@
+package org.myapp.java_8.features.sorting;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class SortingListOfString {
+
+	public static void main(String[] args) {
+
+		List<String> strList = Arrays.asList("vikas","deepak","ambrish","manoj","ram","shyam","gourav");
+		
+		//Method 1. 
+		strList.sort((s1, s2)->s1.compareTo(s2));
+		System.out.println(strList);
+		 
+		// Method 2.
+		Collections.sort(strList);
+	    System.out.println(strList);
+
+		// Method 3.
+		Collections.sort(strList, (s1, s2) -> s1.compareTo(s2));
+		Collections.sort(strList, (s1, s2) -> s2.compareTo(s1));
+		Collections.sort(strList, (s1, s2) -> -s1.compareTo(s2));
+		System.out.println(strList);
+
+		//Method 4.
+	    strList.stream().sorted().forEach(e->System.out.print(e+" "));
+		
+
+		// Method 5.
+		List<String> strList2 = strList.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList());
+	    strList2.forEach(System.out::println);
+
+		// Method 6.
+		List<String> strList3 = strList.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
+		strList3.forEach(System.out::println);
+
+		// Method 7.
+		List<String> strList4 = strList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		strList4.forEach(System.out::println);
+
+	}
+}

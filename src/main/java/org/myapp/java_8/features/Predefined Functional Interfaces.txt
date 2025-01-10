@@ -1,0 +1,36 @@
+Predefined Functional interfaces|
+
+One argument functional interfaces
+---------------------------------
+Predicate
+Function
+Consumer
+Supplier
+
+Two argument Functional interfaces
+-------------------------------------
+BiPredicate
+BiFunction
+BiConsumer
+
+Primitive type Functional interfaces
+-------------------------------------
+IntPredicate
+LongPredicate
+DoublePredicate
+
+Reason for using P, F, C and S|
+-------------------------------
+Take some input and perform some conditional check and return 
+boolean value-------------------->Predicate
+
+Take some input and perform some operation and return the result 
+which is need not to be boolean type it may be boolean also---->Function
+
+Take some input and perform required operations and not require to return 
+anything------------------------->Consumer
+
+Just supplier my required objects never take any input--->Supplier
+
+
+
