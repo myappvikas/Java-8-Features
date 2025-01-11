@@ -3,6 +3,7 @@ package org.myapp.core.java.serialization;
 import java.io.*;
 
 class MyClass implements Serializable {
+
     private static final long serialVersionUID = 1L; // Required for versioning
 
     private String name;
