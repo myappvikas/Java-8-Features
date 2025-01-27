@@ -1,6 +1,7 @@
 package org.myapp.Java_17.features.recard;
 
 record Students(int id,String name){}
+
 public class Demo_New {
 
     public static void main(String[] args) {

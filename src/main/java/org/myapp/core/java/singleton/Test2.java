@@ -9,7 +9,7 @@ public class Test2 {
 
 	public static synchronized Test2 getTest() {
 		if (test2 == null) {
-			test2 = new Test2();
+			return test2 = new Test2();
 		}
 		return test2;
 	}
