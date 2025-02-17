@@ -17,7 +17,7 @@ public class StringJoinerDemo {
 		joiner_1.add("C").add("C++").add("Java");
 		System.out.println(joiner_1.toString());
 		
-		StringJoiner joiner_2 = new StringJoiner(", ", "[", "]");
+		StringJoiner joiner_2 = new StringJoiner(", ", "[", "}");
 		joiner_2.add("C").add("C++").add("Java");
 		System.out.println(joiner_2.toString());
 		

@@ -2,30 +2,12 @@ package org.myapp.core.java.serialization;
 
 import java.io.*;
 
-class MyClass implements Serializable {
-
-    private static final long serialVersionUID = 1L; // Required for versioning
-
-    private String name;
-
-    private int age;
-
-    public MyClass(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "Name: " + name + ", Age: " + age;
-    }
-}
-
-public class SerializationExample {
+public class TransientDemo {
 
     public static void main(String[] args) {
+
         // Serialization
-        MyClass obj = new MyClass("John", 30);
+        MyClass_1 obj = new MyClass_1("vikas", 35);
         String filename = "object.ser";
 
         try (FileOutputStream fileOut = new FileOutputStream(filename);
@@ -37,10 +19,10 @@ public class SerializationExample {
         }
 
         // Deserialization
-        MyClass newObj = null;
+        MyClass_1 newObj = null;
         try (FileInputStream fileIn = new FileInputStream(filename);
              ObjectInputStream in = new ObjectInputStream(fileIn)) {
-            newObj = (MyClass) in.readObject();
+            newObj = (MyClass_1) in.readObject();
             System.out.println("Object deserialized successfully.");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -50,5 +32,23 @@ public class SerializationExample {
         if (newObj != null) {
             System.out.println("Deserialized Object: " + newObj);
         }
+    }
+}
+class MyClass_1 implements Serializable {
+
+    private static final long serialVersionUID = 1L; // Required for versioning
+
+    private transient String name;
+
+    private transient static int age;
+
+    public MyClass_1(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Age: " + age;
     }
 }

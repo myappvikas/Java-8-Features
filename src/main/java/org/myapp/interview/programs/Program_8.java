@@ -8,7 +8,7 @@ public class Program_8 {
 
     public static void main(String[] args) {
 
-        List<Integer> list = Arrays.asList(1,1,2,3,4,5,6,7,8,9);
+        List<Integer> list = Arrays.asList(1, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         List<Integer> list_2 = list.stream().limit(4).collect(Collectors.toList());
         System.out.println(list_2);
 

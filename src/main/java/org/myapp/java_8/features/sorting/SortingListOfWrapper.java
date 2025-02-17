@@ -9,13 +9,6 @@ public class SortingListOfWrapper {
 
 		List<Integer> intList = Arrays.asList(60,30,20,70,3,100);
 
-		intList.add(10);
-		intList.add(20);
-		intList.add(5);
-		intList.add(15);
-		intList.add(25);
-		intList.add(30);
-
 		//Method 1.
 		intList.sort((I1, I2)->I1.compareTo(I2));
 		System.out.println(intList);

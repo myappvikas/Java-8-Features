@@ -10,5 +10,6 @@ public class Program_11 {
         Stream.of("vikas","manoj","uma","ram")
                 .collect(Collectors.groupingBy(e->e.length(),Collectors.toList()))
                 .forEach((k,v)-> System.out.println(k+": "+v));
+
     }
 }

@@ -10,7 +10,7 @@ public class SortingListOfString {
 
 	public static void main(String[] args) {
 
-		List<String> strList = Arrays.asList("vikas","deepak","ambrish","manoj","ram","shyam","gourav");
+		List<String> strList = Arrays.asList("vikas","deepak","pankaj","manoj","ram","shyam","sunil");
 		
 		//Method 1. 
 		strList.sort((s1, s2)->s1.compareTo(s2));

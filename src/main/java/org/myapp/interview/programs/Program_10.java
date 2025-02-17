@@ -7,7 +7,7 @@ public class Program_10 {
 
     public static void main(String[] args) {
 
-        Stream.of("sssss","ssss","sss","ss","s","aaaaa").filter(e -> e.startsWith("s"))
-                .peek(e->System.out.println(e)).collect(Collectors.toList());
+        Stream.of("sssss", "ssss", "sss", "ss", "s", "aaaaa").filter(e -> e.startsWith("s"))
+                .peek(e -> System.out.println(e)).collect(Collectors.toList());
     }
 }

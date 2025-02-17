@@ -1,13 +1,14 @@
 package org.myapp.main.test;
 
+import java.util.stream.Stream;
+
 public class Client {
 
     public static void main(String[] args) {
 
-        SingletonDemo2 singletonDemo1 = SingletonDemo2.getSingletonDemo2();
-        SingletonDemo2 singletonDemo2 = SingletonDemo2.getSingletonDemo2();
-        System.out.println(singletonDemo1==singletonDemo2);
-        System.out.println(singletonDemo1.hashCode());
-        System.out.println(singletonDemo2.hashCode());
+        Stream.iterate(new int[]{0,1},e->new int[]{e[1],e[0]+e[1]})
+                .limit(10)
+                .map(e->e[0])
+                .forEach(e-> System.out.print(e+" "));
     }
 }

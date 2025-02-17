@@ -6,7 +6,7 @@ public class StringCompareToMethodDemo {
 
 		String s1 = "Sachin";
 		String s2 = "Sachin";
-		String s3 = "Ratan";
+		String s3 = "Rohan";
 
 		System.out.println(s1.compareTo(s2));
 		System.out.println(s1.compareTo(s3));
