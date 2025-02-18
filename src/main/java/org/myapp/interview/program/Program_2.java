@@ -8,8 +8,8 @@ public class Program_2 {
     public static void main(String[] args) {
 
         String str = "JavaJavaEE";
-        Map<Character,Long> map = str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(
-           c->c,Collectors.counting()));
-        map.forEach((k,v)-> System.out.println(k+": "+v));
+        Map<Character, Long> map = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(
+                c -> c, Collectors.counting()));
+        map.forEach((k, v) -> System.out.println(k + ": " + v));
     }
 }

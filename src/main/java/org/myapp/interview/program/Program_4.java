@@ -11,8 +11,8 @@ public class Program_4 {
         String str = "java programming language java";
         String[] strArr = str.split(" ");
         List<String> list = Arrays.asList(strArr);
-        list.stream().collect(Collectors.groupingBy(s->s,Collectors.counting())).forEach((k,v)->
-                        System.out.println(k+": "+v)
-                );
+        list.stream().collect(Collectors.groupingBy(s -> s, Collectors.counting())).forEach((k, v) ->
+                System.out.println(k + ": " + v)
+        );
     }
 }

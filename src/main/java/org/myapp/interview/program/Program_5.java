@@ -20,34 +20,34 @@ public class Program_5 {
                 new Employee(107, "Uma", 1004, "MG", "A", 3500000d)
         );
         //Employees based on department
-        Map<String,List<Employee>> employees = list.stream()
-                .collect(Collectors.groupingBy(Employee::getDeptName,Collectors.toList()));
-        employees.forEach((k,v)-> System.out.println(k+": "+v));
+        Map<String, List<Employee>> employees = list.stream()
+                .collect(Collectors.groupingBy(Employee::getDeptName, Collectors.toList()));
+        employees.forEach((k, v) -> System.out.println(k + ": " + v));
 
         System.out.println("Employees count based on department");
-        Map<String,Long> count = list.stream()
-                .collect(Collectors.groupingBy(Employee::getDeptName,Collectors.counting()));
-        count.forEach((k,v)-> System.out.println(k+": "+v));
+        Map<String, Long> count = list.stream()
+                .collect(Collectors.groupingBy(Employee::getDeptName, Collectors.counting()));
+        count.forEach((k, v) -> System.out.println(k + ": " + v));
 
         System.out.println("Active and Inactive employees");
-        List<Employee> active = list.stream().filter(e->e.getStatus().equals("A"))
+        List<Employee> active = list.stream().filter(e -> e.getStatus().equals("A"))
                 .collect(Collectors.toList());
         active.forEach(System.out::println);
 
-        List<Employee> inactive = list.stream().filter(e->e.getStatus().equals("N"))
+        List<Employee> inactive = list.stream().filter(e -> e.getStatus().equals("N"))
                 .collect(Collectors.toList());
         inactive.forEach(System.out::println);
 
         System.out.println("min and max employee salary");
-        Employee minSalary = list.stream().min((e1,e2)->e1.getSalary().compareTo(e2.getSalary())).get();
+        Employee minSalary = list.stream().min((e1, e2) -> e1.getSalary().compareTo(e2.getSalary())).get();
         System.out.println(minSalary);
 
-        Employee maxSalary = list.stream().max((e1,e2)->e1.getSalary().compareTo(e2.getSalary())).get();
+        Employee maxSalary = list.stream().max((e1, e2) -> e1.getSalary().compareTo(e2.getSalary())).get();
         System.out.println(maxSalary);
 
         System.out.println("Employee whose salary is greater in each department");
         Map<String, Optional<Employee>> groupBasedOnSalary = list.stream().collect(Collectors.groupingBy(Employee::getDeptName,
                 Collectors.maxBy(Comparator.comparing(Employee::getSalary))));
-        groupBasedOnSalary.forEach((k,v)-> System.out.println(k+": "+v));
+        groupBasedOnSalary.forEach((k, v) -> System.out.println(k + ": " + v));
     }
 }

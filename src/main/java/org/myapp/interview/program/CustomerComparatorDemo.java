@@ -13,9 +13,9 @@ public class CustomerComparatorDemo {
         Customer c_2 = new Customer("kumar");
         Customer c_3 = new Customer("gupta");
 
-        List<Customer> list = Arrays.asList(c_1,c_2,c_3);
+        List<Customer> list = Arrays.asList(c_1, c_2, c_3);
 
-        Collections.sort(list,new CustomerNameComparator());
+        Collections.sort(list, new CustomerNameComparator());
         System.out.println(list);
     }
 }
