@@ -3,7 +3,7 @@ package org.myapp.core.java.singleton;
 import java.lang.reflect.Constructor;
 
 public class Singleton implements Cloneable {
-	
+
     private static volatile Singleton instance;
 
     private Singleton() {

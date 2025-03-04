@@ -34,6 +34,7 @@ public class TransientDemo {
         }
     }
 }
+
 class MyClass_1 implements Serializable {
 
     private static final long serialVersionUID = 1L; // Required for versioning

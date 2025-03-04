@@ -7,15 +7,15 @@ public class ReverseStringUsingJava_8 {
 
     public static void main(String[] args) {
 
-        String original = "vikas";
+        String str = "vikas";
 
         // Reverse the string using Java 8 Streams
-        String reversed = IntStream.range(0, original.length())
-                .mapToObj(i -> original.charAt(original.length() - i - 1))
+        String reversed = IntStream.range(0, str.length())
+                .mapToObj(i -> str.charAt(str.length() - i - 1))
                 .map(String::valueOf)
                 .collect(Collectors.joining());
 
-        System.out.println("Original: " + original);
+        System.out.println("Original: " + str);
         System.out.println("Reversed: " + reversed);
 
     }
