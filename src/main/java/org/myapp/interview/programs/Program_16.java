@@ -14,7 +14,8 @@ public class Program_16 {
                 new Employee(1,"deepak",10000d),
                 new Employee(3,"uma",450000d)
         ).stream().sorted(Comparator.comparing(Employee::getName)
-                .thenComparing(Comparator.comparing(Employee::getSalary))).forEach(System.out::println);
+                .thenComparing(Comparator.comparing(Employee::getSalary)))
+                .forEach(System.out::println);
 
     }
 }

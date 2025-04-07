@@ -46,7 +46,7 @@ public class SerializationExample {
             e.printStackTrace();
         }
 
-        // Print deserialized object
+        // Printer deserialized object
         if (newObj != null) {
             System.out.println("Deserialized Object: " + newObj);
         }

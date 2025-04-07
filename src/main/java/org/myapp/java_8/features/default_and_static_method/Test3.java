@@ -3,7 +3,7 @@ package org.myapp.java_8.features;
 interface Interface7{
 	
 	public static void m6() {
-		System.out.println("Interface Static method method");
+		System.out.println("MyInterface Static method method");
 	}
 }
 

@@ -19,6 +19,7 @@ public class AddingCustomClassExammple {
 
 		System.out.println("After avoiding duplicate elements - -");
 		Set<Book> books = new HashSet<Book>(list);
+		System.out.println(books.size());
 		for (Book b : books) {
 			System.out.println("Book name is: - " + b.bookName + "   " + "Book id is :- " + b.bookId);
 		}
