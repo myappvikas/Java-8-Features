@@ -16,3 +16,4 @@ public interface MyInterface_2 {
         System.out.println("Shared logic");
     }
 }
+

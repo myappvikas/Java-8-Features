@@ -5,13 +5,13 @@ public class Main {
 
         PaymentFactory factory = new PaymentFactory();
 
-        Payment payment_1 = factory.getPaymentMethod("creditcard");
+        Payable payment_1 = factory.getPaymentMethod("gpay");
         payment_1.pay(250.0);
 
-        Payment payment_2 = factory.getPaymentMethod("paypal");
+        Payable payment_2 = factory.getPaymentMethod("paytm");
         payment_2.pay(120.5);
 
-        Payment payment_3 = factory.getPaymentMethod("googlepay");
+        Payable payment_3 = factory.getPaymentMethod("phonepay");
         payment_3.pay(75.0);
     }
 }
