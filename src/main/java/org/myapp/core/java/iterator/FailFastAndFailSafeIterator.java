@@ -8,6 +8,12 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/*
+A Fail-Safe iterator does not throw an exception if the
+collection is modified during iteration. Instead,
+it works on a copy of the original collection or uses special mechanisms to avoid exceptions.
+*/
+
 public class FailFastAndFailSafeIterator {
 
 	public static void main(String[] args) {

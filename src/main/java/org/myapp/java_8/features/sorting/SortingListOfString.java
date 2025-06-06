@@ -10,7 +10,8 @@ public class SortingListOfString {
 
     public static void main(String[] args) {
 
-        List<String> strList = Arrays.asList("vikas", "deepak", "pankaj", "manoj", "ram", "shyam", "sunil");
+        var strList = Arrays.asList("vikas", "deepak", "pankaj", "manoj", "ram",
+                "shyam", "sunil");
 
         //Method 1.
         strList.sort((s1, s2) -> s1.compareTo(s2));
@@ -30,16 +31,18 @@ public class SortingListOfString {
         strList.stream().sorted().forEach(e -> System.out.print(e + " "));
 
         // Method 5.
-        List<String> strList2 = strList.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList());
+        var strList2 = strList.stream()
+                .sorted().collect(Collectors.toList());
         strList2.forEach(System.out::println);
 
         // Method 6.
-        List<String> strList3 = strList.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
+        var strList3 = strList.stream().sorted(Collections
+                .reverseOrder()).collect(Collectors.toList());
         strList3.forEach(System.out::println);
 
         // Method 7.
-        List<String> strList4 = strList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        var strList4 = strList.stream().sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
         strList4.forEach(System.out::println);
-
     }
 }

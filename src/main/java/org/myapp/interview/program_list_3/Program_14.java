@@ -4,9 +4,10 @@ public class Program_14 {
 
     public static void main(String[] args) {
 
-        String str = "aabccd";
+        String str = "swiss";
         str.chars().mapToObj(c -> (char) c).distinct().forEach(c -> System.out.print(c));
-        //char c = str.chars().mapToObj(e -> (char) e).distinct().findFirst().get();
-        //System.out.println(c);
+        System.out.println("");
+        char c = str.chars().mapToObj(e -> (char) e).distinct().findFirst().get();
+        System.out.println(c);
     }
 }

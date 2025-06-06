@@ -26,6 +26,7 @@ public class StringJoinerDemo {
 		
 		StringJoiner joiner_4 = new StringJoiner("");
 		joiner_4.add("POCO").add("Samsung").add("RedMi");
+		System.out.println(joiner_4);
 		
 		StringJoiner joiner_5 = new StringJoiner(", ", "[", "]");
 		joiner_5.add(" AAA").add("BBB").add("CCC");

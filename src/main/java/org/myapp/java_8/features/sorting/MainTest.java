@@ -10,7 +10,13 @@ class MainTest {
 
 	public static void main(String[] args) {
 
-		List<Integer> list = Arrays.asList(3,5,1,2,7,9,8);
-		list.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
+		var list = List.of(
+			new Customer("ambrish","dullahapur"),
+				new Customer("deepak","dullahapur"),
+				new Customer("vikas","dullahapur")
+		);
+		list.stream().sorted(Comparator.comparing(Customer::name).reversed())
+				.forEach(System.out::println);
 	}
 }
+record Customer(String name, String address){}

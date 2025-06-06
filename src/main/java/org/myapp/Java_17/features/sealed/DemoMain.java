@@ -13,12 +13,9 @@ class D extends B {
 
 }
 
-/*sealed interface M permits N{
+//sealed interface M permits N{}
 
-}
-sealed interface N extends M{
-
-}*/
+//sealed interface N extends M{}
 
 public class DemoMain {
 

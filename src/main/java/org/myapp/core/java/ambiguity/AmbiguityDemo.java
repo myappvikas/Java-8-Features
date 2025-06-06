@@ -1,5 +1,10 @@
 package org.myapp.core.java.ambiguity;
 
+/*Ambiguity in Java typically refers to situations where the compiler cannot
+determine which method or constructor to call,
+usually due to method overloading or diamond inheritance (in interfaces).*/
+
+//1.Method Overloading Ambiguity.
 public class AmbiguityDemo {
 
 	public static void sum(int a, long b) {

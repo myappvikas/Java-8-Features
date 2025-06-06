@@ -7,7 +7,7 @@ public class LSPDemo {
         payment.pay(500.0);
 
         // Offline payment
-        OfflinePayment cod = new CashOnDelivery_1();
-        cod.collectCash(1000.0);
+        OfflinePayment cord = new CashOnDelivery_1();
+        cord.collectCash(1000.0);
     }
 }

@@ -7,31 +7,22 @@ public class CustomClassSortingDemo {
 
     public static void main(String[] args) {
 
-        Arrays.asList(
-                        new Employee(3, "vikas", 30),
-                        new Employee(5, "deepak", 28),
-                        new Employee(2, "manoj", 35)
+       Arrays.asList(
+                        new Employee( "vikas", 30,5000000.0d),
+                        new Employee( "deepak", 28, 3000000.0d),
+                        new Employee( "manoj", 35, 4000000d)
                 ).stream().sorted(Comparator.comparing(Employee::name))
                 .forEach(System.out::println);
 
         Arrays.asList(
-                        new Employee(3, "uma", 30),
-                        new Employee(5, "sahabaz", 28),
-                        new Employee(2, "hariom", 35)
+                        new Employee( "vikas", 30,5000000.0d),
+                        new Employee( "deepak", 28, 3000000.0d),
+                        new Employee( "manoj", 35, 4000000d)
                 ).stream().sorted((Comparator.comparing(Employee::age)).reversed())
                 .forEach(System.out::println);
 
-
-        System.out.println("----------------------------------");
-
-        Arrays.asList(
-                        new Employee(3, "mau", 30),
-                        new Employee(5, "ghazipur", 28),
-                        new Employee(2, "varanasi", 35)
-                ).stream().sorted((e1, e2) -> e2.name().compareTo(e1.name()))
-                .forEach(System.out::println);
     }
 }
 
-record Employee(Integer id, String name, Integer age) {
+record Employee(String name, Integer age, double salary) {
 }

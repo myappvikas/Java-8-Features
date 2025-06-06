@@ -8,6 +8,15 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+/*In Java, Fail-Fast and Fail-Safe iterators refer to how an iterator
+behaves when the underlying collection is modified during iteration.*/
+
+/*
+A Fail-Fast iterator throws a ConcurrentModificationException if
+the collection is structurally modified after the creation of
+the iterator (except through the iterator’s own remove() method).
+*/
+
 public class FailFastAndFailSafeIterator2 {
 
 	public static void main(String[] args) {

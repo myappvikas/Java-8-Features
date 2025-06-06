@@ -14,7 +14,6 @@ public class Program_6 {
                 .collect(Collectors.groupingBy(c -> c, LinkedHashMap::new,
                         Collectors.counting()));
 
-        // Find the first character with a count of 1
         char firstNonRepeatingChar = charCount.entrySet().stream()
                 .filter(entry -> entry.getValue() == 1)
                 .map(Map.Entry::getKey)
