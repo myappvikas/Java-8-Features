@@ -7,8 +7,7 @@ public class ExceptionTryCatchDemo3 {
 		try {
 			int data = 50/0;
 		} catch (Exception e) {
-			System.out.println("catch block");
-			e.getMessage();
+			System.out.println(e.getMessage());
 		}
 		System.out.println("Rest of code here");
 	}

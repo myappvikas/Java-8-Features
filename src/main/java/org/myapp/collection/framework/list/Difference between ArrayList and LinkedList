@@ -1,0 +1,12 @@
+ArrayList:
+----------
+1. Internal Datastructures  used by ArrayList is Dynamic Array or growable array.
+2. ArrayList is better for search operation because data will be stored at
+   continuous memory locations.
+
+
+
+LinkedList:
+------------
+1. Internal Datastructures used by LinkedList is Doubly Linked List.
+2. LinkedList is better for insertion or deletion in the middle.

@@ -1,0 +1,19 @@
+List:
+----
+1. Maintains insertion order
+2. Allows duplicates
+3. Supports index-based access (e.g., get(int index))
+4. Allows multiple null values
+5. Generally slower for search (O(n))
+6. ArrayList, LinkedList, Vector, stack
+7. Use when order matters and duplicates are allowed
+
+Set:
+----
+1. No guaranteed order (unless using LinkedHashSet or TreeSet)
+2. Does not allow duplicates
+3. Does not support indexing
+4. Allows at most one null value (in HashSet and LinkedHashSet)
+5. Faster for search (O(1) in HashSet, O(log n) in TreeSet)
+6. HashSet, LinkedHashSet, TreeSet
+7. Use when uniqueness is important

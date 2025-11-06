@@ -7,7 +7,7 @@ public class ExceptionTryCatchDemo1 {
 		try {
 			int data = 50/0;
 		} catch (ArithmeticException e) {
-			e.getMessage();
+			System.out.println(e.getMessage());
 		}
 		System.out.println("Rest of code here");
 	}

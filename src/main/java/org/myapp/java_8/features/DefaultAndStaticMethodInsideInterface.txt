@@ -7,7 +7,7 @@ Anonymous inner class |
  3.Anonymous inner class can implement an interface which contain any number
    of abstract method.
 
-Default Method| Virtual Extension method| Defender Method|
+Default Method | Virtual Extension method | Defender Method |
 ----------------------------------------------------------
 It is new feature of java 8.
 
@@ -26,12 +26,12 @@ Java does not provide support for multiple inheritance with respect to classes
 because of ambiguity problem.
 
 But from Java 8 it provide support for multiple inheritance with respect to interface only
-we can achieve this by using interface name dot super keyword only.
+we can achieve this by using interface name dot(.) super keyword only.
 
 Ex: InterfaceName.super.m1();
 
 Example1: Suppose we have a interface and there are 100 implementation class. If you 
-are adding a extra method inside interface then immediately you are going to get 
+are adding a extra method inside interface then immediately you will get
 compilation error because of all 100 implementation class will give compilation 
 error.  
 
@@ -41,7 +41,7 @@ static method inside interface|
 -------------------------------
 We can define static method inside interface from java 8.
 
-Reason: Static method no way related to class that's why it is better to go for 
+Reason: Static method is no way related to object that's why it is better to go for
 defining inside interface.
 
 Meant for: To define general utility methods we are not required to call with class name.

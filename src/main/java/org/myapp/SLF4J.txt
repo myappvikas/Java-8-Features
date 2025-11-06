@@ -1,0 +1,64 @@
+SLF4J:
+------
+Logging is a critical part of any Java application for debugging, monitoring, and troubleshooting.
+
+Steps to Implement Logger in Java
+-----------------------------------
+
+1. Choose a Logging Framework
+
+You can use:
+Built-in: java.util.logging (JUL):
+Third-party (preferred in real projects):Log4j 2, SLF4J + Logback (most popular)
+
+Recommendation: Use SLF4J with Logback, because SLF4J gives you a common logging
+API and you can switch implementations later.
+
+2. Add Dependency (Maven Example)
+
+If you use Maven, add to pom.xml:
+
+<dependencies>
+    <!-- SLF4J API -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>2.0.16</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.5.6</version>
+    </dependency>
+</dependencies>
+
+3. Create Logger in Your Class
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class MyApp {
+    private static final Logger logger = LoggerFactory.getLogger(MyApp.class);
+
+    public static void main(String[] args) {
+        logger.info("Application started");
+        logger.debug("Debugging info");
+        logger.warn("This is a warning");
+        logger.error("An error occurred");
+    }
+}
+
+4. Configure Logger (logback.xml or logback-spring.xml in resources/)
+
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
+

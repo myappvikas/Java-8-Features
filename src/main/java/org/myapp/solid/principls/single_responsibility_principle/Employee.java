@@ -2,19 +2,19 @@ package org.myapp.solid.principls.single_responsibility_principle;
 
 public class Employee {
 
-    private String name;
     private int id;
+    private String name;
 
-    public Employee(String name, int id) {
-        this.name = name;
+    public Employee(int id, String name) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
+        this.name = name;
     }
 
     public int getId() {
         return id;
+    }
+
+    public String  getName() {
+        return name;
     }
 }

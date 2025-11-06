@@ -12,7 +12,7 @@ public class OptionalClassEx3 {
 		
 		Optional<String> checkNull = Optional.ofNullable(str[5]);
 		
-		System.out.println(checkNull);
+		System.out.println(checkNull.get());
 
 		if (checkNull.isPresent()) {
 			String lowercaseString = str[5].toLowerCase();

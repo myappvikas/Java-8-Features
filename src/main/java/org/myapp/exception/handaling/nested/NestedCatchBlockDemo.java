@@ -9,16 +9,16 @@ public class NestedCatchBlockDemo {
 			System.out.println("going to divide");
 			int data = 30/2;
 			}catch(ArithmeticException e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 			try {
 				int[] intArr = new int[5];
 				intArr[5] = 4;
 			}catch(ArrayIndexOutOfBoundsException e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 	}
 }

@@ -17,8 +17,8 @@ public class OptionalClassEx5 {
 	        Optional<String> optional = Optional.of(str[5]); 
 	        System.out.println(optional);
 	     
-	        Optional<String> optiona2 = Optional.ofNullable(str[5]); 
-	        System.out.println(optiona2);
+	        Optional<String> optional2 = Optional.ofNullable(str[5]);
+	        System.out.println(optional2);
 
 	        // If value is present, it returns an Optional otherwise returns an empty Optional  
 	        System.out.println("Filtered value: "+optional.filter(s->s.equals("Abc")));  

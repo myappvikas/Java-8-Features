@@ -8,8 +8,7 @@ public class ExceptionTryCatchDemo2 {
 			int data = 50/0;
 			System.out.println("Rest of code here");
 		} catch (ArithmeticException e) {
-			System.out.println("catch block");
-			e.getMessage();
+			System.out.println(e.getMessage());
 		}
 	}
 }

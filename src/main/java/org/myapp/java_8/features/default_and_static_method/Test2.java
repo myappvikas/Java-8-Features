@@ -1,4 +1,4 @@
-package org.myapp.java_8.features;
+package org.myapp.java_8.features.default_and_static_method;
 
 interface Interface5{
 	default void a() {
@@ -10,13 +10,18 @@ interface Interface6{
 		System.out.println("Default method a from Interface6");
 	}
 }
-public class Test2 implements Interface5,Interface6{
-	
-	public void a() {
-		Interface5.super.a();
+
+class Test10 implements Interface5, Interface6{
+	public void a(){
+		Interface6.super.a();
 	}
+
+}
+public class Test2 {
+
 	public static void main(String[] args) {
-		Test2 test2 = new Test2();
-		test2.a();
+
+		Test10 test10 = new Test10();
+		test10.a();
 	}
 }

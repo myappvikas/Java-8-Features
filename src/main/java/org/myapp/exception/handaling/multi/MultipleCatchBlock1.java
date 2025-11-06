@@ -8,12 +8,11 @@ public class MultipleCatchBlock1 {
 			int[] intArray = new int[10];
 			intArray[5] = 30/0;
 		} catch (ArithmeticException e) {
-			System.out.println("exception raised");
-			e.getMessage();
+			System.out.println(e.getMessage());
 		} catch (ArrayIndexOutOfBoundsException e) {
-			e.getMessage();
+			System.out.println(e.getMessage());
 		} catch (Exception e) {
-			e.getMessage();
+			System.out.println(e.getMessage());
 		}
 		System.out.println("Rest of code here");
 	}

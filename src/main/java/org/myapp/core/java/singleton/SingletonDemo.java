@@ -1,63 +1,45 @@
 package org.myapp.core.java.singleton;
 
-import java.lang.reflect.Constructor;
+import java.io.Serial;
 
-public class SingletonDemo implements Cloneable {
+public final class SingletonDemo {
 
+    // Use volatile to guarantee that any thread reading a variable sees
+    // the most recent value written by another thread, ensuring safe
+    // and consistent visibility of shared data across threads.
     private static volatile SingletonDemo instance;
 
+    // Private constructor
     private SingletonDemo() {
-        if(instance != null){
-            throw new RuntimeException("Instance of this class already has been created");
+        // Prevent reflection from creating a new instance
+        if (instance != null) {
+            throw new IllegalStateException("Instance already created");
         }
     }
 
+    // Thread-safe, double-checked locking
     public static SingletonDemo getInstance() {
-        if (instance == null) {
+        SingletonDemo localRef = instance;
+        if (localRef == null) {
             synchronized (SingletonDemo.class) {
-                if (instance == null) {
-                    instance = new SingletonDemo();
+                localRef = instance;
+                if (localRef == null) {
+                    instance = localRef = new SingletonDemo();
                 }
             }
         }
-        return instance;
+        return localRef;
     }
 
+    // Prevent cloning
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        throw new CloneNotSupportedException("Cloning of singleton instance is not allowed");
+        throw new CloneNotSupportedException("Cloning not allowed for singleton");
     }
 
-    // Method to create another instance using reflection
-    public static SingletonDemo createInstanceUsingReflection() {
-        try {
-            Constructor<SingletonDemo> constructor = SingletonDemo.class.getDeclaredConstructor();
-            constructor.setAccessible(true);
-            return constructor.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public static void main(String[] args) {
-        // Testing singleton instance
-        SingletonDemo instance1 = SingletonDemo.getInstance();
-        SingletonDemo instance2 = SingletonDemo.getInstance();
-
-        System.out.println("instance1 hashcode: " + instance1.hashCode());
-        System.out.println("instance2 hashcode: " + instance2.hashCode());
-
-        // Testing reflection to create another instance
-        SingletonDemo instance3 = SingletonDemo.createInstanceUsingReflection();
-        System.out.println("instance3 hashcode: " + instance3.hashCode());
-
-        // Testing cloning
-        try {
-            SingletonDemo instance4 = (SingletonDemo) instance1.clone();
-            System.out.println("instance4 hashcode: " + instance4.hashCode());
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+    // Preserve singleton during deserialization
+    @Serial
+    protected Object readResolve() {
+        return getInstance();
     }
 }

@@ -13,7 +13,7 @@ BiPredicate
 BiFunction
 BiConsumer
 
-Primitive type Functional interfaces
+Primitive version Functional interfaces
 -------------------------------------
 IntPredicate
 LongPredicate

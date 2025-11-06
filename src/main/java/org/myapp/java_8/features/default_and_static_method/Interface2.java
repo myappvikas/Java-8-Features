@@ -1,4 +1,4 @@
-package org.myapp.java_8.features;
+package org.myapp.java_8.features.default_and_static_method;
 
 public interface Interface2 {
 	

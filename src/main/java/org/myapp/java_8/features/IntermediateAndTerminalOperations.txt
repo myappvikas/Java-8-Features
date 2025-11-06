@@ -1,5 +1,6 @@
-1.Intermediate Operation: These are operations that transform a stream into another stream. They are lazy,
-meaning they don’t process the data until a terminal operation is invoked.
+1.Intermediate Operation: These operations transform a stream into
+another stream. They are lazy, meaning they don’t process the data until a terminal
+operation is invoked.
 ----------------------------
 1.filter(Predicate)
 2.map(Function)      user for one-to-one mapping
@@ -11,7 +12,7 @@ meaning they don’t process the data until a terminal operation is invoked.
 8.limit(n)
 9.skip(n)
 
-2.Terminal Operations: These operations produce a result or a side-effect and terminate the
+2.Terminal Operations: These operations produces a result and terminate the
 stream pipeline. Once a terminal operation is invoked, the stream cannot be reused.
 ----------------------------------
 1.forEach(Consumer)

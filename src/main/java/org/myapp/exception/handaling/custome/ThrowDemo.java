@@ -10,8 +10,8 @@ public class ThrowDemo {
 		}
 	}
 	public static void main(String[] args) {
-		//validate(10);
-		validate(30);
+		validate(10);
+		//validate(30);
 		System.out.println("rest of code");	
 	}
 }

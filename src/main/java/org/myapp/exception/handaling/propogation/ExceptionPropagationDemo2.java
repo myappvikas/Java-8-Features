@@ -5,7 +5,7 @@ import java.io.IOException;
 public class ExceptionPropagationDemo2 {
 	
 	void m() {
-		//Compilation exception
+		//Compilation error
 		//throw new IOException();
 	}
 	void n() {
@@ -15,7 +15,7 @@ public class ExceptionPropagationDemo2 {
 		try {
 			n();
 		} catch (Exception e) {
-		   System.out.println("Exception occure");
+		   System.out.println("Exception occur");
 		}
 	}
 	public static void main(String[] args) {

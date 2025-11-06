@@ -7,7 +7,7 @@ public class FinallyBlockDemo2 {
         try {
             int data = 25 / 0;
         } catch (NullPointerException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } finally {
             System.out.println("finally block");
         }

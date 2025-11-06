@@ -10,7 +10,7 @@ public class ThrowsDemo {
         try {
             obj.method();
         } catch (IOException e) {
-            System.out.println("Exception Handaled");
+            System.out.println("Exception Handled");
         }
         System.out.println("Rest of the code");
     }

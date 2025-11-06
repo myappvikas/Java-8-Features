@@ -3,6 +3,7 @@ package org.myapp.executer.service;
 import java.util.concurrent.*;
 
 public class CallableExample {
+
     public static void main(String[] args) throws Exception {
 
         ExecutorService executor = Executors.newSingleThreadExecutor();

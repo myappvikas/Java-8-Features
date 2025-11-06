@@ -4,7 +4,6 @@ package org.myapp.core.java.ambiguity;
 determine which method or constructor to call,
 usually due to method overloading or diamond inheritance (in interfaces).*/
 
-//1.Method Overloading Ambiguity.
 public class AmbiguityDemo {
 
 	public static void sum(int a, long b) {
@@ -16,6 +15,7 @@ public class AmbiguityDemo {
 	}
 	
 	public static void main(String[] args) {
+		//Problem
 		//AmbiguityDemo.sum(10, 20);
 		
 		//Solution.

@@ -8,7 +8,7 @@ public class FinallyBlockDemo1 {
             int data = 50 / 5;
             System.out.println(data);
         } catch (NullPointerException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } finally {
             System.out.println("finally block always executed");
         }
