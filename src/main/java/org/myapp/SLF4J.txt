@@ -1,6 +1,7 @@
 SLF4J:
 ------
-Logging is a critical part of any Java application for debugging, monitoring, and troubleshooting.
+Logging is a critical part of any Java application for debugging,
+monitoring, and troubleshooting.
 
 Steps to Implement Logger in Java
 -----------------------------------
@@ -9,9 +10,11 @@ Steps to Implement Logger in Java
 
 You can use:
 Built-in: java.util.logging (JUL):
-Third-party (preferred in real projects):Log4j 2, SLF4J + Logback (most popular)
+Third-party (preferred in real projects):Log4j 2,
+SLF4J + Logback (most popular)
 
-Recommendation: Use SLF4J with Logback, because SLF4J gives you a common logging
+Recommendation: Use SLF4J with Logback, because SLF4J gives you a common
+logging
 API and you can switch implementations later.
 
 2. Add Dependency (Maven Example)

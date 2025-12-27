@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Program_3 {
+public class Program3 {
 
     public static void main(String[] args) {
 

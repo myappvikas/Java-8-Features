@@ -11,29 +11,29 @@ public class StringJoinerDemo {
 
 		StringJoiner joiner = new StringJoiner(", ");
 		joiner.add("Java").add("Programming").add("Language");
-		System.out.println(joiner.toString());
+		System.out.println(joiner);
 
-		StringJoiner joiner_1 = new StringJoiner(", ", "[", "]");
-		joiner_1.add("C").add("C++").add("Java");
-		System.out.println(joiner_1.toString());
+		StringJoiner joiner1 = new StringJoiner(", ", "[", "]");
+		joiner1.add("C").add("C++").add("Java");
+		System.out.println(joiner1);
 		
-		StringJoiner joiner_2 = new StringJoiner(", ", "[", "}");
-		joiner_2.add("C").add("C++").add("Java");
-		System.out.println(joiner_2.toString());
+		StringJoiner joiner2 = new StringJoiner(", ", "[", "}");
+		joiner2.add("C").add("C++").add("Java");
+		System.out.println(joiner2);
 		
-		StringJoiner joiner_3 = joiner_1.merge(joiner_2);
-		System.out.println(joiner_3.toString());
+		StringJoiner joiner3 = joiner1.merge(joiner2);
+		System.out.println(joiner3);
 		
-		StringJoiner joiner_4 = new StringJoiner("");
-		joiner_4.add("POCO").add("Samsung").add("RedMi");
-		System.out.println(joiner_4);
+		StringJoiner joiner4 = new StringJoiner("");
+		joiner4.add("POCO").add("Samsung").add("RedMi");
+		System.out.println(joiner4);
 		
-		StringJoiner joiner_5 = new StringJoiner(", ", "[", "]");
-		joiner_5.add(" AAA").add("BBB").add("CCC");
-		System.out.println(joiner_2.toString());
+		StringJoiner joiner5 = new StringJoiner(", ", "[", "]");
+		joiner5.add(" AAA").add("BBB").add("CCC");
+		System.out.println(joiner5);
 		
-		StringJoiner joiner_6 = joiner_4.merge(joiner_5);
-		System.out.println(joiner_6.toString());
+		StringJoiner joiner6 = joiner4.merge(joiner5);
+		System.out.println(joiner6);
 		
 		List<String> strList = Arrays.asList("Vikas","Kumar","Gupta");
 		strList.stream().collect(Collectors.joining(", ", "{", "}"));

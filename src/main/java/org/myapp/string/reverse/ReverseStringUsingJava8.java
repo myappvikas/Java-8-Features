@@ -19,8 +19,8 @@ public class ReverseStringUsingJava8 {
                 .map(String::valueOf)
                 .collect(Collectors.joining());
 
-        log.info("Original: " + str);
-        log.info("Reversed: " + reversed);
+        log.info("Original String: {}", str);
+        log.info("Reversed String: {}", reversed);
 
         log.info("");
 
@@ -31,7 +31,7 @@ public class ReverseStringUsingJava8 {
                 .mapToObj(i->strings[strings.length-i-1])
                 .map(String::valueOf)
                 .collect(Collectors.joining(" "));
-        log.info("Original String: "+s);
-        log.info("Reversed String: "+reverse);
+        log.info("Original String: {} ", s);
+        log.info("Reversed String: {} ", reverse);
     }
 }

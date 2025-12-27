@@ -3,7 +3,7 @@ package org.myapp.interview.strings;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Program_2 {
+public class Program2 {
 
     public static void main(String[] args) {
 

@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class DemoMainEmployee {
+public class EmployeeDemo {
 
-    private static final Logger log = LoggerFactory.getLogger(DemoMainEmployee.class);
+    private static final Logger log = LoggerFactory.getLogger(EmployeeDemo.class);
 
     public static void main(String[] args) {
 
@@ -24,7 +24,7 @@ public class DemoMainEmployee {
                 new Employee(106, "Rahul Kumar", 1003, "SL", "N", 100000d),
                 new Employee(107, "Uma", 1004, "MG", "A", 3500000d)
         );
-        //Employees based on department
+        //Employees group based on department
         Map<String, List<Employee>> employees = list.stream()
                 .collect(Collectors.groupingBy(Employee::deptName, Collectors.toList()));
         employees.forEach((key, value) -> log.info("{}: {}", key, value));
@@ -43,24 +43,22 @@ public class DemoMainEmployee {
 
         List<Employee> inactive = list.stream().filter(e -> e.status().equals("N"))
                 .toList();
-        inactive.forEach(employee -> log.info("Active employee: {}", employee));
+        inactive.forEach(employee -> log.info("Inactive employee: {}", employee));
 
-        //min and max employee salary"
+        //Min and Max salary of employees
         Optional<Employee> minSalary = list.stream().min(Comparator.comparing(Employee::salary));
         minSalary.ifPresent(employee -> log.info("Employee who is getting min salary: {}", employee));
 
-
         Optional<Employee> maxSalary = list.stream().max(Comparator.comparing(Employee::salary));
-        maxSalary.ifPresent(employee -> log.info("Employee who is getting min salary: {}", employee));
+        maxSalary.ifPresent(employee -> log.info("Employee who is getting max salary: {}", employee));
 
-
-        //Employee whose salary is greater in each department
+        //Employees whose salary are greater in each department
         Map<String, Optional<Employee>> groupBasedOnSalary = list.stream().collect(Collectors
                 .groupingBy(Employee::deptName,
                 Collectors.maxBy(Comparator.comparing(Employee::deptName))));
-        groupBasedOnSalary.forEach((k, v) -> log.info("Employee whose salary is greater in each department: {}, {}", k, v));
+        groupBasedOnSalary.forEach((k, v) -> log.info("Employees whose salary are greater in each department: {}, {}", k, v));
 
-        //Map of deportment and list of employee name
+        //Group of deportment and list of employee name
         Map<String, List<String>> map2 = list.stream()
                 .collect(Collectors.groupingBy(Employee::deptName,
                         Collectors.mapping(Employee::empName, Collectors.toList())));

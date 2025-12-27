@@ -7,7 +7,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Program_10 {
+public class Program10 {
 
     public static void main(String[] args) {
 
@@ -20,14 +20,12 @@ public class Program_10 {
                         Collectors.counting()));
 
         // Sort by frequency (descending) and get the 2nd most repeated
-        Optional<Character> secondMost = freqMap.entrySet().stream()
+        Optional<Character> secondMost = freqMap.entrySet()
+                .stream()
                 .sorted(Map.Entry.<Character, Long>comparingByValue(Comparator.reverseOrder()))
                 .skip(1) // skip the most repeated
                 .map(Map.Entry::getKey)
                 .findFirst();
-
-        // Print result
         secondMost.ifPresent(c-> System.out.println("Second largest frequency of char: "+c));
-
     }
 }

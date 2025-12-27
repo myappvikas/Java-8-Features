@@ -19,27 +19,19 @@ public final class SingletonDemo {
 
     // Thread-safe, double-checked locking
     public static SingletonDemo getInstance() {
-        SingletonDemo localRef = instance;
-        if (localRef == null) {
+        if (instance == null) {
             synchronized (SingletonDemo.class) {
-                localRef = instance;
-                if (localRef == null) {
-                    instance = localRef = new SingletonDemo();
+                if (instance == null) {
+                    instance = new SingletonDemo();
                 }
             }
         }
-        return localRef;
+        return instance;
     }
 
     // Prevent cloning
     @Override
     protected Object clone() throws CloneNotSupportedException {
         throw new CloneNotSupportedException("Cloning not allowed for singleton");
-    }
-
-    // Preserve singleton during deserialization
-    @Serial
-    protected Object readResolve() {
-        return getInstance();
     }
 }

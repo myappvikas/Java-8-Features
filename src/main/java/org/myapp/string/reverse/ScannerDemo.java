@@ -12,11 +12,11 @@ public class ScannerDemo {
     private static final Logger log = LoggerFactory.getLogger(ScannerDemo.class);
     public static void main(String[] args) {
 
-        String message = scannerDemoUsingInt();
-        log.info(message);
+        String result = scannerDemoUsingInt();
+        log.info("Result: {}", result);
 
-        String reverseString = scannerDemoUsingString();
-        log.info("Reverse String: "+reverseString);
+        String reverseString2 = scannerDemoUsingString();
+        log.info("Reverse String: {}",reverseString2);
     }
 
     private static String scannerDemoUsingInt() {
@@ -28,15 +28,14 @@ public class ScannerDemo {
         else
             return "Odd number";
     }
-
     private static String scannerDemoUsingString() {
         Scanner scanner = new Scanner(System.in);
         log.info("Enter a String");
         String str = scanner.nextLine();
-        String reversed = "";
+        StringBuilder builder = new StringBuilder();
         for (int i = str.length() - 1; i >= 0; i--) {
-            reversed += str.charAt(i);
+            builder.append(str.charAt(i));
         }
-        return reversed;
+        return builder.toString();
     }
 }

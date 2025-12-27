@@ -10,20 +10,19 @@ public class ReverseString {
     public static void main(String[] args) {
 
         String str = "java";
-
-        //method1
-        String reversed = "";
+        StringBuilder builder = new StringBuilder();
         for (int i = str.length() - 1; i >= 0; i--) {
-            reversed += str.charAt(i);
+            builder.append(str.charAt(i));
         }
-        log.info("Reverse of given String: " + reversed);
+        String reversed = builder.toString();
+        log.info("Reverse of given String: {}", reversed);
 
         //method 2
         String reversed2 = new StringBuffer("Java").reverse().toString();
-        log.info("Reverse of given String: " + reversed2);
+        log.info("Reverse of given String: {}", reversed2);
 
         //method3
         String reversed3 = new StringBuilder("Java").reverse().toString();
-        log.info("Reverse of given String: " + reversed3);
+        log.info("Reverse of given String: {}", reversed3);
     }
 }

@@ -1,9 +1,8 @@
 package org.myapp.interview.strings;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
-public class Program_9 {
+public class Program9 {
 
     public static void main(String[] args) {
 

@@ -20,7 +20,7 @@ public class ConcatDemo {
 
 		// Concatenate the lists
 		List<String> newList = Stream.concat(listOne.stream(), listTwo.stream())
-				.collect(Collectors.toList());
+				.toList();
 		System.out.println(newList);
 	}
 }

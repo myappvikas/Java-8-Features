@@ -9,6 +9,6 @@ public class ScheduledTaskExample {
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
         Runnable task = () -> System.out.println("Scheduled task run at: "
                 + System.currentTimeMillis());
-       //scheduler.scheduleAtFixedRate(task, 0, 2, TimeUnit.SECONDS);
+       scheduler.scheduleAtFixedRate(task, 0, 2, TimeUnit.SECONDS);
     }
 }

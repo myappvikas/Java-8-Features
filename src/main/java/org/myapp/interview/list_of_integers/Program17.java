@@ -2,7 +2,6 @@ package org.myapp.interview.list_of_integers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Arrays;
 
 public class Program17 {

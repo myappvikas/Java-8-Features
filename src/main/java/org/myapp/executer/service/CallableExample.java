@@ -4,15 +4,17 @@ import java.util.concurrent.*;
 
 public class CallableExample {
 
-    public static void main(String[] args) throws Exception {
+    static void main() throws Exception {
 
-        ExecutorService executor = Executors.newSingleThreadExecutor();
-        Callable<String> task = () -> {
-            Thread.sleep(1000);
-            return "Hello from Callable";
-        };
-        Future<String> future = executor.submit(task);
-        System.out.println("Result: " + future.get()); // blocks until result is ready
-        executor.shutdown();
+        try(ExecutorService executor = Executors.newSingleThreadExecutor()) {
+            Callable<String> task = () -> {
+                Thread.sleep(1000);
+                return "Hello from Callable";
+            };
+            for (int i = 0; i < 5; i++) {
+                System.out.println(executor.submit(task).get());
+            }
+            executor.shutdown();
+        }
     }
 }

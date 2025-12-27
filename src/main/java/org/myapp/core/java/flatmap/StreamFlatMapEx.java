@@ -24,6 +24,6 @@ public class StreamFlatMapEx {
 		
 		lists.stream()
 				.flatMap(List::stream)
-				.forEach(e-> System.out.print(e+" "));
+				.forEach(System.out::println);
 	}
 }
